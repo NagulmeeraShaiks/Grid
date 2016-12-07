@@ -1,0 +1,41 @@
+GRID ---> Parallel 
+
+To start hub
+
+java -jar selenium-server-standalone-2.53.1.jar -role hub
+
+To open hub console
+
+http://localhost:4444/grid/console
+
+To start node1
+
+java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://192.168.1.6:4444/grid/register -Dwebdriver.chrome.driver=C:\Users\QTT\Downloads\chromedriver.exe
+
+To start node2
+
+java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://192.168.1.6:4444/grid/register -port 9999 -Dwebdriver.chrome.driver=C:\Users\QTT\Downloads\chromedriver.exe
+
+
+d = new RemoteWebDriver(url of hub,browser)
+
+Ex: d = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),DesiredCapabilities.chrome());
+
+
+The Selenium Server was started with -Dwebdriver.chrome.driver=c:\path\to\your\chromedriver.exe
+
+
+C:\Users\QTT\Downloads\chromedriver.exe
+
+
+
+
+
+
+
+
+
+
+
+
+
